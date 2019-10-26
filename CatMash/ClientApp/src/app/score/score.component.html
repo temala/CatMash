@@ -1,0 +1,12 @@
+<a [routerLink]="['']"><h1>Vote</h1></a>
+<div class="row">
+  <h1 *ngIf="!IsInitialized">Loading ...</h1>
+  <div class="row" *ngIf="IsInitialized">
+    <table>
+      <tr *ngFor="let cat of Cats">
+        <td><img class="cat" src="{{cat.Image}}" /></td>
+        <td><h1>{{cat.Score}}</h1></td>
+      </tr>
+    </table>
+  </div>
+</div>
