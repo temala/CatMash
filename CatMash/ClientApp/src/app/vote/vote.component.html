@@ -1,22 +1,28 @@
-<a [routerLink]="['score']"><h1>Scores</h1></a>
-<div class="row">
+<div class="row justify-content-md-center">
+
   <h1 *ngIf="!IsInitialized">Loading ...</h1>
-  <div class="row" *ngIf="IsInitialized && !IsGameOver">
-    <div class="column left">
-      <img class="cat" src="{{CurrentCatDuel.LeftOpponenet.Image}}" (click)="Vote(CurrentCatDuel.LeftOpponenet.Id)" />
+  <div *ngIf="IsInitialized && !IsGameOver">
+    <div class="row justify-content-md-center">
+      <h1>Who is the cutest ? Click to vote !</h1>
     </div>
-    <div class="column right">
-      <img class="cat" src="{{CurrentCatDuel.RightOpponenet.Image}}" (click)="Vote(CurrentCatDuel.RightOpponenet.Id)" />
+    <div class="row">
+      <div class="col-6 justify-content-md-center">
+        <img class="cat" src="{{CurrentCatDuel.LeftOpponenet.Image}}" (click)="Vote(CurrentCatDuel.LeftOpponenet.Id)" />
+      </div>
+      <div class="col-6 justify-content-md-center">
+        <img class="cat" src="{{CurrentCatDuel.RightOpponenet.Image}}" (click)="Vote(CurrentCatDuel.RightOpponenet.Id)" />
+      </div>
+    </div>
+    <div class="row justify-content-md-center" *ngIf="IsGameOver">
+      <div class="column left">
+        <img class="cat" src="{{Winner.Image}}" />
+      </div>
+      <div class="column right">
+        <h1>THE WINNER</h1>
+        <h1>SCORE: {{Winner.Score}}</h1>
+      </div>
     </div>
   </div>
-  <div class="row" *ngIf="IsGameOver">
-    <div class="column left">
-      <img class="cat" src="{{Winner.Image}}" />
-    </div>
-    <div class="column right">
-      <h1>THE WINNER</h1>
-      <h1>SCORE: {{Winner.Score}}</h1>
-    </div>
-  </div>
+
 </div>
 

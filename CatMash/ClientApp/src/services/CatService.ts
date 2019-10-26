@@ -35,6 +35,6 @@ export class CatService extends CatServiceBase {
      * @inheritdoc
      */
     GetCatList() {
-        return this.httpClient.get(this.ApiBaseUri +'?id=cats.json');
+        return this.httpClient.get(this.ApiBaseUri +'?resource=cats.json');
     }
 }

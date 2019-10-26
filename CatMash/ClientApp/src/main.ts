@@ -9,7 +9,7 @@ export function getBaseUrl() {
 }
 
 export function getExtUrl() {
-    return document.getElementsByTagName('base')[0].href +'ext/root';
+    return document.getElementsByTagName('base')[0].href +'ext/gateway';
 }
 
 const providers = [
