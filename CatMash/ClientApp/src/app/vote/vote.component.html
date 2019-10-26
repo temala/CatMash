@@ -13,13 +13,11 @@
         <img class="cat" src="{{CurrentCatDuel.RightOpponenet.Image}}" (click)="Vote(CurrentCatDuel.RightOpponenet.Id)" />
       </div>
     </div>
-    <div class="row justify-content-md-center" *ngIf="IsGameOver">
-      <div class="column left">
-        <img class="cat" src="{{Winner.Image}}" />
-      </div>
-      <div class="column right">
-        <h1>THE WINNER</h1>
-        <h1>SCORE: {{Winner.Score}}</h1>
+    <div class="row justify-content-md-center" *ngIf="IsGameStarted">
+    
+      <div class="col-12">
+        <h1>#1</h1>
+        <img class="cat small" src="{{Winner.Image}}" />
       </div>
     </div>
   </div>

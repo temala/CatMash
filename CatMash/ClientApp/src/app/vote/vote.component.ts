@@ -65,9 +65,9 @@ export class VoteComponent {
     Winner: IOpponent;
 
     /**
-     * Indicates if all the cats has a score
-     * */
-    public get IsGameOver() {
+    * Indicates if all the cats has a score
+    * */
+    public get IsGameStarted() {
 
         return this.Winner != null;
     }
@@ -94,6 +94,8 @@ export class VoteComponent {
 
         try {
             this.CurrentCatDuel = this.catsManager.GetNewDuel();
+
+            this.Winner = this.catsManager.GetWinner();
         }
         catch (e) {
             if (e.message == "All cat duels are scored !") {

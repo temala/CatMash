@@ -133,7 +133,13 @@ export class CatsManager extends CatManagerBase {
 
         let maxScore = Math.max.apply(this, this.catList.map(cat => cat.Score));
 
-        return this.catList.filter(cat => cat.Score === maxScore)[0];
+        let winners = this.catList.filter(cat => cat.Score === maxScore);
+
+        if (winners.length != this.catList.length) {
+            return winners[0];
+        }
+
+        return null;
     }
 
     GetCatList(): IOpponent[] {
