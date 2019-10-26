@@ -1,8 +1,8 @@
 .cat {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
-  border: 10px solid #99cccc;
+  border: 5px solid #99cccc;
   border-radius: 500px;
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;

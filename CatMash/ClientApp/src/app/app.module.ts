@@ -13,6 +13,8 @@ import { EloScoreService } from '../services/EloScoreService';
 import { CatServiceBase } from '../services/CatServiceBase';
 import { ScoreServiceBase } from '../services/ScoreServiceBase';
 import { ScoreComponent } from './score/score.componenet';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -24,10 +26,12 @@ import { ScoreComponent } from './score/score.componenet';
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
         HttpClientModule,
         FormsModule,
+        MatProgressSpinnerModule,
         RouterModule.forRoot([
             { path: '', component: VoteComponent, pathMatch: 'full' },
             { path: 'score', component: ScoreComponent }
-        ])
+        ]),
+        BrowserAnimationsModule
     ],
     providers: [
         CatService,

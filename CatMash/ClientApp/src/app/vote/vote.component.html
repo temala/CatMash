@@ -1,7 +1,6 @@
 <div class="row justify-content-md-center">
-
-  <h1 *ngIf="!IsInitialized">Loading ...</h1>
-  <div *ngIf="IsInitialized && !IsGameOver">
+  <mat-progress-spinner color="primary" mode="indeterminate" *ngIf="!IsInitialized"></mat-progress-spinner>
+  <div *ngIf="IsInitialized">
     <div class="row justify-content-md-center">
       <h1>Who is the cutest ? Click to vote !</h1>
     </div>
@@ -14,7 +13,7 @@
       </div>
     </div>
     <div class="row justify-content-md-center" *ngIf="IsGameStarted">
-    
+
       <div class="col-12">
         <h1>#1</h1>
         <img class="cat small" src="{{Winner.Image}}" />

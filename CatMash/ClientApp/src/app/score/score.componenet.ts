@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CatManagerBase } from "../../models/CatManagerBase";
 import { ICatsManager } from "../../models/interfaces/ICatsManager";
+import { delay } from "q";
 
 @Component({
     selector: 'app-score-component',
@@ -34,7 +35,7 @@ export class ScoreComponent {
     * Indicates if the cats manager is initialized.
     * */
     public get IsInitialized() {
-
+        delay(10000);
         return this.catsManager.IsInitialized;
     }
 

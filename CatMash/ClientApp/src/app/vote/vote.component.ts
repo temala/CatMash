@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IDuel } from '../../models/interfaces/IDuel';
 import { ICatsManager } from '../../models/interfaces/ICatsManager';
 import { CatManagerBase } from '../../models/CatManagerBase';

@@ -1,5 +1,5 @@
-<div class="row">
-  <h1 *ngIf="!IsInitialized">Loading ...</h1>
+<div class="row justify-content-md-center">
+  <mat-progress-spinner color="primary" mode="indeterminate"  *ngIf="!IsInitialized"></mat-progress-spinner>
   <div class="row" *ngIf="IsInitialized">
     <table>
       <tr *ngFor="let cat of Cats">
